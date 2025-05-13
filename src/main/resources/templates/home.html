@@ -4,23 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        .container{
-            margin:auto;
-            width: 50%;
-            padding: 30px;
-            background: #e2e2e2;
-        }
-    </style>
+    <link rel="stylesheet" data-th-href="@{'/src/main/resources/static/css/output.css'}">
 </head>
 <body>
-    <div class = "container">
-        <h1 data-th-text="${name}"> Welcome to home page</h1> 
-        <p>Youtube Channel: <span data-th-text="${youtubeChannel}"></span></p>
+    <div class="bg-gray-200 w-1/2 p-4 flex flex-col space-y-3 mx-auto mt-4"></div>
+        <h1 class="text-2xl font-bold" data-th-text="${name}"> 
+            Welcome to home page
+        </h1> 
+        <p class="text-xl text-gray-700">
+            Youtube Channel: <span data-th-text="${youtubeChannel}"></span>
+        </p>
         <p>Github Repo Link: <span th:text="${githubRepo}"></span></p>
 
         <a data-th-href="${githubRepo}"> Click here to open</a>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo unde deleniti nobis saepe vel exercitationem, aliquid laborum, inventore sapiente quod rerum ad voluptatem perspiciatis pariatur repellendus! Molestias delectus ipsa non.</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo unde deleniti nobis saepe 
+           vel exercitationem, aliquid laborum, inventore sapiente quod rerum ad voluptatem perspiciatis
+           pariatur repellendus! Molestias delectus ipsa non.
+        </p>
     </div>
 </body>
 </html>
